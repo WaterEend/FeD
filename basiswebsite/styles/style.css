@@ -1,0 +1,127 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+*, *::after, *::before {
+  box-sizing:border-box;  
+}
+
+
+
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+	--background-header:#312d2a;
+	--text:#ffffff;
+	--oracleserif: "Georgia", "Times", "Garamond", serif;
+  	--buttonDiv: #312d2a;
+}
+
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+
+/****************/
+/* JOUW STYLING */
+/****************/
+
+body {
+	margin: 0;
+}
+
+
+
+/***********/
+/* HEADER  */
+/***********/
+
+header {
+	position: sticky;
+	top: 0;
+	z-index: 10;
+	display: flex;
+	align-items: center;
+	gap: 2em;
+	background-color: var(--background-header);
+}
+
+
+/* nav */
+h1 {
+	margin-right: 2rem;
+	padding-left: 2rem;
+}
+
+
+/* nav > ul {
+	list-style: none;
+	display: flex;
+	gap: 1em;
+	margin: 0;
+	padding: 0;
+	
+} */
+
+
+/* Header icons */
+header > ul {
+  list-style: none;
+  display: flex;
+  position: absolute;
+  right: 0;
+}
+
+header svg {
+  fill: white;
+  width:1.8em;
+  height:1.8em;
+}
+
+header svg:nth-of-type(1) {
+	margin-left: 1em;
+}
+
+header button {
+	background: transparent;
+	border: none;
+	cursor: pointer;
+}
+
+/* groter scherm */
+@media (width > 40em) {
+	header {
+
+	}
+}
+
+
+/**********/
+/* footer */
+/**********/
+
+footer {
+  background-color: var(--background-header);
+  color: white;
+}
+
+footer ul {
+	list-style: none;
+}
+
+/* groter scherm */
+@media (width > 40em) {
+	footer {
+
+	}
+}
+
+/* focus state */
