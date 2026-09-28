@@ -1,20 +1,59 @@
-/* Film title */
-header section h1 {
-	grid-row-start: 2;
-	grid-column: 1 / 3;
 
+/* ------==Header==------ */
+
+header {
+	grid-template-rows: 4em minmax(0, 1fr) auto auto;
+	grid-template-columns: auto 1fr auto auto;
 }
 
-header section h1 img {
+/* pathe logo */
+header > h1 {
+	grid-row-start: 1;
+	grid-column-start: 1;
+	height: 2em;
+	width: 2em;
+	margin: 0 0 0 .5em;
+}
+
+header > h1 img {
 	width: 100%;
 	height: 100%;
-	object-fit: contain;
-	object-position: left bottom;
+}
+
+/* background image */
+header > picture {
+	grid-row: 1 / 4;
+	grid-column: 1 / -1;	
+}
+
+header > picture img {
+	width: 100%;
+	height: auto;
+}
+
+header div {
+	grid-row: 1 / 4;
+	grid-column: 1 / -1 ;
+	background: linear-gradient(transparent 50%, var(--color-background) 100%), radial-gradient( transparent 60%, rgba(0,0,0,0.6) 100%);
+}
+
+
+/* Film title */
+header section > a:nth-of-type(1) {
+	grid-row-start: 2;
+	grid-column: 1 / 3;
+	margin-bottom: .5em;
+	align-self: end;
+}
+
+header section > a:nth-of-type(1) img {
+	width: 100%;
+	height: 100%;
 	margin: 0 1em;
 }
 
 /* koop je tickets  */
-header section > a {
+header section > a:nth-of-type(2) {
 	grid-row-start: 3;
 	grid-column: 1 / 4;
 	display: flex;
@@ -30,8 +69,12 @@ header section > a {
 	margin: 0 .5em .5em 1em;
 }
 
+header section > a:nth-of-type(2) svg {
+	transform: rotate( -20deg);
+}
+
 /* + button */
-header section button:nth-of-type(1) {
+header section > button {
 	grid-row-start: 3;
 	grid-column-start: 4;
 	display: flex;
@@ -42,7 +85,7 @@ header section button:nth-of-type(1) {
 	font-size: 1.5rem;
 	border: none;
 	border-radius: 10px;
-    padding: .5rem 1rem .5rem 1rem;
+    padding: .5rem 1rem;
 	margin: .5rem .5rem .5rem 0;
 }
 
@@ -50,39 +93,63 @@ header section button:nth-of-type(1) {
 header section h2 {
 	grid-row-start: 4;
 	grid-column-start: 1;
+	width: fit-content;
+	height: fit-content;
+	padding: .7em;
+	margin: 1.2em 0 0 .4em;
+	z-index: 1;
+	transform: rotate(-7deg);
+	background-color: var(--color-button1);
+	font-size: 1rem;
+	border-radius: 6px;
 }
 
 
 /* locatie dropdown */
-header section button:nth-of-type(2) {
+header search {
 	grid-row-start: 4;
 	grid-column: 1 / 5;
+	display: flex;
+	margin: 1em;
+	border: 1px solid grey;
+	border-radius: 10px;
+	background: var(--color-button3);	
+}
+
+header search > button:nth-of-type(1) {
+	flex: 1;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	gap: .5em;
-	margin: 1em;
-	padding: 1em;
-    border: 1px solid grey;
-	border-radius: 10px;
-	background-color: var(--color-button2);
+	padding: 1.5em;
+    border: none;
 	color: var(--color-text2);
 	font-weight: bold;
-	
+	background: none;
 }
+
+header search > button:nth-of-type(2), header search > button:nth-of-type(3) {
+	display: none;
+}
+
 
 /* ------==Main==------ */
 
+
+/* lijn boven sections */
 main section:not(:first-of-type) {
     border-top: 1px solid rgb(78, 77, 77) ;
     padding-top: 3em;
 }
 
+/* Title in de sections */
 main h2 {
     color: var(--color-text2);
     margin: 0 0 .2em .5em;
 }
 
+/* locatie in section */
 main a {
     text-decoration: none;
 }
@@ -141,8 +208,246 @@ main section:nth-of-type(1) > a:nth-of-type(2), main section:nth-of-type(2) > a:
     background-color: var(--color-button2);
     color: var(--color-text2);
     font-weight: bold;
-    text-decoration: none;
     border-radius: 6px;
     padding: 1em;
-    margin: 1em;
+    margin: 1em 1em 2em;
+}
+
+/* articles */
+
+main section:nth-of-type(3) {
+	padding: 0 1em 1em;
+}
+
+main section:nth-of-type(3) h2 {
+	margin: 1em 0 .2em .5em;
+}
+
+main section:nth-of-type(3) div {
+	display: flex;
+	gap: .5em;
+	overflow-x: auto;
+	padding: 0 1em;
+}
+
+main section:nth-of-type(3) div::-webkit-scrollbar {
+	display: none;
+}
+
+main section:nth-of-type(3) article {
+	width: 16em;
+	flex: 0 0 auto;
+	position: relative;
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+main section:nth-of-type(3) img {
+	width: 100%;
+	height: 16em;
+	object-fit: cover;
+}
+
+main section:nth-of-type(3) h3 {
+	position: absolute;
+	bottom: 4.5rem;
+	margin: 0;
+	padding: 0 1rem;
+	color: var(--color-text2);
+	font-size: 1rem;
+}
+
+main section:nth-of-type(3) a {
+	position: absolute;
+	bottom: 1em;
+	left: 1em;
+	right: 1em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--color-button1);
+	color: var(--color-text);
+	font-weight: bold;
+	border-radius: 5px;
+	padding: .8em;
+}
+
+/* pathe thuis deel */
+
+main section:nth-of-type(4) {
+	background-color: var(--color-button1);
+	text-align: center;
+	margin: 2em 0;
+	padding: 2em 1.5em;
+}
+
+main section:nth-of-type(4) h2 {
+	color: var(--color-text);
+	font-size: 1.4rem;
+	margin: 0 0 0 .8rem;
+}
+
+main section:nth-of-type(4) img {
+	height: 3em;
+	margin: .5em 0;
+}
+
+main section:nth-of-type(4) p {
+	color: var(--color-text);
+}
+
+main section:nth-of-type(4) a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: .5em;
+	background-color: var(--color-button2);
+	color: var(--color-text2);
+	font-weight: bold;
+	border-radius: 8px;
+	padding: .8em;
+}
+
+/* ------==Animatie==------ */
+
+
+/* ------==Computer screen width==------ */
+
+@media (min-width: 68em) {
+	
+	header > h1 {
+		display: none;
+	}
+	
+	header {
+		grid-template-columns: 5% 24em 4em 1fr;
+		grid-template-rows: 1fr auto auto 8em auto;
+	}
+
+	/* film title */
+	header section > a:nth-of-type(1) {
+		grid-column: 2 / 4;
+		margin: 0 0 1em;
+	}
+
+	/* koop je tickets */
+	header section > a:nth-of-type(2) {
+		grid-column: 2;
+		margin: 0;
+	}
+
+	/* + knop */
+	header section > button {
+		grid-column: 3;
+		margin: 0;
+	}
+
+	/* waar? */
+	header section h2 {
+		grid-row-start: 5;
+		grid-column-start: 2;
+		align-self: center;
+		margin: 0 0 0 -1rem;
+	}
+
+	/* locatie dropdown */
+	header search {
+		grid-row-start: 5;
+		grid-column: 2 / 5;
+		margin-right: 4em;
+		padding: .2em 1em .2em 2.5em;
+	}
+
+	header search > button:nth-of-type(1) {
+		font-size: 1.1rem;
+		padding: 0;
+	}
+
+	header search > button:nth-of-type(2), header search > button:nth-of-type(3) {
+		display: flex;
+		align-items: center;
+		gap: .5rem;
+		margin: .5rem;
+		padding: .9rem 1.2rem;
+		border: none;
+		border-radius: 8px;
+		background-color: var(--color-button3);
+		color: var(--color-text2);
+		font-size: 1rem;
+		font-weight: bold;
+	}
+
+	/* main */
+
+	main {
+		margin-top: 2em;
+	}
+
+	main section:not(:nth-of-type(4)) {
+		margin-left: 3em;
+	}
+
+	/* h2 */
+	main section:nth-of-type(1) h2, main section:nth-of-type(2) h2 {
+		display: inline-block;
+	}
+
+	/* locatie link */
+	main section:nth-of-type(1) a:nth-of-type(1), main section:nth-of-type(2) > a:nth-of-type(1) {
+		display: inline-flex;
+	}
+
+	/* link onder film posters */
+	main section:nth-of-type(1) > a:nth-of-type(2), main section:nth-of-type(2) > a:nth-of-type(2) {
+		display: none;
+	}
+
+	/* articles */
+	main section:nth-of-type(3) {
+		padding-right: 3em;
+	}
+
+	main section:nth-of-type(3) div {
+		gap: 1.2em;
+		padding: 0;
+	}
+
+	main section:nth-of-type(3) article {
+		flex: 1;
+	}
+
+	main section:nth-of-type(3) img {
+		height: 25em;
+	}
+
+	main section:nth-of-type(3) h3 {
+		bottom: 6.5rem;
+		padding: 0 2.5rem;
+		font-size: 1.8rem;
+	}
+
+	main section:nth-of-type(3) a {
+		margin: 1em;
+	}
+
+	main section:nth-of-type(4) h2 {
+		display: inline-block;
+	}
+
+	main section:nth-of-type(4) {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+	}
+
+	main section:nth-of-type(4) p, main section:nth-of-type(4) a {
+		flex-basis: 100%;
+	}
+
+	main section:nth-of-type(4) a {
+		flex-basis: 20em;
+		margin: 3em auto 0;
+	}
 }

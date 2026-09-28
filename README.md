@@ -40,11 +40,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   Home page
-  <img src="images/FirstPagePathe.png" width="375px" alt="Een collectie van films die nu in de bioscoop draaien">
+  <img src="images/FirstPagePathe.png" width="375px" alt="Pathe homepage met een lijst van films die nu in de bioscoop draaien">
 
   #### Screenshot(s) van de tweede pagina (small screen):
   Movie page
-  <img src="images/SecondPagePathe.png" width="375px" alt="Een korte omschrijving met een video trailer van de film Spider-man: Brand new day">
+  <img src="images/SecondPagePathe.png" width="375px" alt="Film pagina met een video trailer van de film Spider-man: Brand new day">
  
 </details>
 
@@ -68,10 +68,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="readme-images/PatheFullPage1Screenshot.png" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/BreakdownSketch.png" width="375px" alt="breakdown van de hele pagina">
 
   ### dynamisch deel (bijv menu): 
-  <img src="readme-images/BreakdownSketch.png" width="375px" alt="breakdown van een dynamisch deel">
+  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
 
   ### wellicht nog een dynamisch deel (bijv filter): 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
@@ -122,7 +122,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Stand van zaken
   <img src="readme-images/CodeProbleem-H1-href.png" width="375px" alt="Ik gebruikte href implaats van img op mijn H1">
-  <img src="readme-images/CodeProbleem-SchaduwRondPagina.png.png" width="375px" alt="Ik snap niet hoe ik de schaduw rond mijn gehele pagina krijg">
+  <img src="readme-images/CodeProbleem-SchaduwRondPagina.png" width="375px" alt="Ik snap niet hoe ik de schaduw rond mijn gehele pagina krijg">
+  <img src="readme-images/Codeprobleem-H2Beweegt.png" width="375px" alt="Mijn h2 beweegt met de articles">
   
 
 
@@ -135,10 +136,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-- ...
+  - div gradient
+  - z-index, rotate
+  - span
+  - margin
+  - h1 pathe logo homepage
+  - span leeftijd indicator
 
 </details>
 
@@ -233,5 +236,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   4. https://lucide.dev/icons/
   5. https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Guides/Techniques
   6. https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/figure
-  7. 
+  7. https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes
+  8. https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/date
+  <!-- ik wist niet dat ik geen <p> in mijn buttons mocht gebruiken -->
+  9. https://www.w3schools.com/tags/tag_button.asp 
+  10. https://css-tricks.com/almanac/pseudo-selectors/b/after-and-before/
+  11. https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/picture
+  12. claude ai vragen gesteld over dingen die ik niet kon vinden op google.
+  13. https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/::details-content
 </details>

@@ -7,6 +7,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	<title>Pathe Home</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap" rel="stylesheet">
 	
 	<link href="styles/style.css" rel="stylesheet">
 	<link href="styles/page1.css" rel="stylesheet">
@@ -15,10 +19,51 @@
 
 <body>
 	<header>
-		<img src="images/imgi_92_bam-Phone-visual-template-pathe.jpg" alt="By any means film poster">
-		<a href="index.html">
-			<img src="images/imgi_91_Pathelogo.svg" alt="Naar Pathe home pagina">
-		</a>
+		<nav aria-label="Navigatie menu">
+			<h1>
+				<a href="index.html">
+					<img src="images/imgi_91_Pathelogo.svg" alt="Pathe">
+				</a>
+			</h1>
+			<ul>
+				<li><a href="#" aria-current="page">films</a></li>
+				<li><a href="#">Bioscopen</a></li>
+				<li><a href="#">
+					<img src="images/clubPathe.png" alt="">
+					Club Pathe
+				</a></li>
+				<li><a href="#">Abonnementen</a></li>
+				<li><a href="#">Meer van Pathe</a></li>
+				<li><a href="#">
+					Pathe Thuis 
+				<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-move-up-right preview-icon"><path d="M13 5H19V11"/><path d="M19 5L5 19"/></svg>
+				</a></li>
+			</ul>
+			<button aria-label="zoeken">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+			</button>
+			<button aria-label="Account">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+			</button>
+			<button aria-expanded="false">
+				NL
+				<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>
+			</button>
+			<ul aria-label="Taal kiezen">
+				<li><a href="#" aria aria-current="true">Nederlands</a></li>
+				<li><a href="#">Engels</a></li>
+			</ul>
+		</nav>
+		<picture>
+			<source media="(min-width: 45em)" srcset="images/imgi_2_bam-desktop-visual-template-pathe.jpg">
+			<img src="images/imgi_92_bam-Phone-visual-template-pathe.jpg" alt="By any means film poster">
+		</picture>
+		<div></div>
+		<h1>
+			<a href="index.html">
+				<img src="images/imgi_91_Pathelogo.svg" alt="Naar Pathe home pagina">
+			</a>
+		</h1>
 		<button type="button" aria-label="zoeken">
 			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
 		</button>
@@ -26,44 +71,52 @@
 			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
 		</button>
 		<section>
-			<h1>
-				<a href="#">
+				<a href="page2.html">
 					<img src="images/imgi_3_bam-logo-mobile-pathe.png" alt="By any means">
 				</a>
-			</h1>
 			<a href="#"> 
-				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ticket"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M13 5v2"/><path d="M13 17v2"/><path d="M13 11v2"/></svg>
+				<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ticket"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M13 5v2"/><path d="M13 17v2"/><path d="M13 11v2"/></svg>
 				Koop je tickets
 			</a>
-			<button aria-label="add to watchlist">+</button>
-			<!-- Hoe werkt dit? -->
+			<button aria-label="voeg toe aan watchlist">+</button>
 			<h2>Waar?</h2>
-			<button aria-haspopup="listbox">
-				Pathe Amsterdam-Noord 
-				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>
-			</button>
+			<!-- ai gaf aan dat ik <search> het best kon gebruiken voor dit -->
+			<search>
+				<button aria-haspopup="listbox">
+					Pathe Amsterdam-Noord
+					<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>
+				</button>
+				<button>
+					<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin preview-icon"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+					In mijn buurt
+				</button>
+				<button>
+					<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart preview-icon"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/></svg>
+					Favoriete bioscopen
+				</button>
+			</search>
 		</section>
 	</header>
-	<nav>
+	<nav aria-label="Navigatie menu">
 		<ul>
 			<li><a href="#" aria-current="page">
-				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-film"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M7 3v18"/><path d="M3 7.5h4"/><path d="M3 12h18"/><path d="M3 16.5h4"/><path d="M17 3v18"/><path d="M17 7.5h4"/><path d="M17 16.5h4"/></svg>
+				<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-film"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M7 3v18"/><path d="M3 7.5h4"/><path d="M3 12h18"/><path d="M3 16.5h4"/><path d="M17 3v18"/><path d="M17 7.5h4"/><path d="M17 16.5h4"/></svg>
 				Films
 			</a></li>
 			<li><a href="#">
-				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+				<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
 				Bioscopen
 			</a></li>
 			<li><a href="#">
-				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-id-card"><path d="M13 19a4 4 0 00-8 0"/><path d="M16 10h2"/><path d="M16 14h2"/><circle cx="9" cy="12" r="3"/><rect x="2" y="5" width="20" height="14" rx="2"/></svg>
+				<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-id-card"><path d="M13 19a4 4 0 00-8 0"/><path d="M16 10h2"/><path d="M16 14h2"/><circle cx="9" cy="12" r="3"/><rect x="2" y="5" width="20" height="14" rx="2"/></svg>
 				Club Pathe
 			</a></li>
 			<li><a href="#">
-				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-qr-code"><rect width="5" height="5" x="3" y="3" rx="1"/><rect width="5" height="5" x="16" y="3" rx="1"/><rect width="5" height="5" x="3" y="16" rx="1"/><path d="M21 16h-3a2 2 0 0 0-2 2v3"/><path d="M21 21v.01"/><path d="M12 7v3a2 2 0 0 1-2 2H7"/><path d="M3 12h.01"/><path d="M12 3h.01"/><path d="M12 16v.01"/><path d="M16 12h1"/><path d="M21 12v.01"/><path d="M12 21v-1"/></svg>
+				<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-qr-code"><rect width="5" height="5" x="3" y="3" rx="1"/><rect width="5" height="5" x="16" y="3" rx="1"/><rect width="5" height="5" x="3" y="16" rx="1"/><path d="M21 16h-3a2 2 0 0 0-2 2v3"/><path d="M21 21v.01"/><path d="M12 7v3a2 2 0 0 1-2 2H7"/><path d="M3 12h.01"/><path d="M12 3h.01"/><path d="M12 16v.01"/><path d="M16 12h1"/><path d="M21 12v.01"/><path d="M12 21v-1"/></svg>
 				Wallet
 			</a></li>
 			<li><a href="#">
-				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
+				<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
 				Account
 			</a></li>
 		</ul>
@@ -73,135 +126,379 @@
 			<h2>Nu te zien</h2>
 			<a href="#">
 				in Pathe Amsterdam-Noord 
-				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>
+				<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>
 			</a>
 			<ul>
 				<li>
-					<figure>
-						<img src="images/odyssey-MoviePoster.jpg" alt="The Odyssey poster">
-						<figcaption>The Odyssey</figcaption>
-					</figure>
+					<a href="page2.html">
+						<figure>
+							<img src="images/avengers-MoviePoster.webp" alt="">
+							<figcaption>Avengres Endgame Encore</figcaption>
+						</figure>
+					</a>
 				</li>
 				<li>
-					<figure>
-						<img src="images/pressure-MoviePoster.jpg" alt="Pressure poster">
-						<figcaption>Pressure</figcaption>
-					</figure>
+					<a href="page2.html">
+						<figure>
+							<img src="images/odyssey-MoviePoster.jpg" alt="">
+							<figcaption>The Odyssey</figcaption>
+						</figure>
+					</a>
 				</li>
 				<li>
-					<figure>
-						<img src="images/obsession-MoviePoster.jpg" alt="Obsession poster">
-						<figcaption>Obsession</figcaption>
-					</figure>
+					<a href="page2.html">
+						<figure>
+							<img src="images/pressure-MoviePoster.jpg" alt="">
+							<figcaption>Pressure</figcaption>
+						</figure>
+					</a>
 				</li>
 				<li>
-					<figure>
-						<img src="images/birdman-MoviePoster.jpg" alt="Birdman poster">
-						<figcaption>Birdman (The Unexpected Virtue of Ignorance)</figcaption>
-					</figure>
+					<a href="page2.html">
+						<figure>
+							<img src="images/obsession-MoviePoster.jpg" alt="">
+							<figcaption>Obsession</figcaption>
+						</figure>
+					</a>
+				</li>
+				<li>
+					<a href="page2.html">
+						<figure>
+							<img src="images/birdman-MoviePoster.jpg" alt="">
+							<figcaption>Birdman (The Unexpected Virtue of Ignorance)</figcaption>
+						</figure>
+					</a>
+				</li>
+				<li>
+					<a href="page2.html">
+						<figure>
+							<img src="images/mutiny-MoviePoster.jpg" alt="">
+							<figcaption>Mutiny</figcaption>
+						</figure>
+					</a>
+				</li>
+				<li>
+					<a href="page2.html">
+						<figure>
+							<img src="images/spiderman-MoviePoster.webp" alt="">
+							<figcaption>Spider-Man: Brand New Day</figcaption>
+						</figure>
+					</a>
+				</li>
+				<li>
+					<a href="page2.html">
+						<figure>
+							<img src="images/ban-MoviePoster.jpg" alt="">
+							<figcaption>By Any Means</figcaption>
+						</figure>
+					</a>
+				</li>
+				<li>
+					<a href="page2.html">
+						<figure>
+							<img src="images/sugar-MoviePoster.webp" alt="">
+							<figcaption>Sugar</figcaption>
+						</figure>
+					</a>
 				</li>
 			</ul>
 			<a href="#">
 				Alle actuele films
-				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>
+				<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>
 			</a>
 		</section>
-		<!-- figure goed gebruikt? -->
 		<section>
 			<h2>Specials & Events</h2>
 			<a href="#">
 				in Pathe Amsterdam-Noord 
-				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>
+				<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>
 			</a>
 			<ul>
 				<li>
-					<!-- hoe krijg ik nieuw mark en age rec -->
-					<figure>
-						<img src="images/spiderman-MoviePoster.webp" alt="Spiderman brand new day poster">
-						<figcaption>Spider-Man: Brand New Day</figcaption>
-					</figure>
+					<!-- misschien marks erbij doen -->
+					<a href="page2.html">
+						<figure>
+							<img src="images/spiderman-MoviePoster.webp" alt="">
+							<figcaption>Spider-Man: Brand New Day</figcaption>
+						</figure>
+					</a>
 				</li>
 				<li>
-					<figure>
-						<img src="images/ban-MoviePoster.jpg" alt="By any means poster">
-						<figcaption>By Any Means</figcaption>
-					</figure>
+					<a href="page2.html">
+						<figure>
+							<img src="images/ban-MoviePoster.jpg" alt="">
+							<figcaption>By Any Means</figcaption>
+						</figure>
+					</a>
 				</li>
 				<li>
-					<figure>
-						<img src="images/mutiny-MoviePoster.jpg" alt="Mutiny poster">
-						<figcaption>Mutiny</figcaption>
-					</figure>
+					<a href="page2.html">
+						<figure>
+							<img src="images/mutiny-MoviePoster.jpg" alt="">
+							<figcaption>Mutiny</figcaption>
+						</figure>
+					</a>
 				</li>
 				<li>
-					<figure>
-						<img src="images/onenightonly-MoviePoster.jpg" alt="One Night Only poster">
-						<figcaption>One Night Only</figcaption>
-					</figure>
+					<a href="page2.html">
+						<figure>
+							<img src="images/onenightonly-MoviePoster.jpg" alt="">
+							<figcaption>One Night Only</figcaption>
+						</figure>
+					</a>
+				</li>
+				<li>
+					<a href="page2.html">
+						<figure>
+							<img src="images/bohemian-MoviePoster.webp" alt="">
+							<figcaption>Bohemian Rhapsody</figcaption>
+						</figure>
+					</a>
+				</li>
+				<li>
+					<a href="page2.html">
+						<figure>
+							<img src="images/sugar-MoviePoster.webp" alt="">
+							<figcaption>Sugar</figcaption>
+						</figure>
+					</a>
+				</li>
+				<li>
+					<a href="page2.html">
+						<figure>
+							<img src="images/runner-MoviePoster.webp" alt="">
+							<figcaption>Runner</figcaption>
+						</figure>
+					</a>
+				</li>
+				<li>
+					<a href="page2.html">
+						<figure>
+							<img src="images/pressure-MoviePoster.jpg" alt="">
+							<figcaption>Pressure</figcaption>
+						</figure>
+					</a>
+				</li>
+				<li>
+					<a href="page2.html">
+						<figure>
+							<img src="images/avengers-MoviePoster.webp" alt="">
+							<figcaption>Avengres Endgame Encore</figcaption>
+						</figure>
+					</a>
+				</li>
+				<li>
+					<a href="page2.html">
+						<figure>
+							<img src="images/pressure-MoviePoster.jpg" alt="">
+							<figcaption>Pressure</figcaption>
+						</figure>
+					</a>
 				</li>
 			</ul>
 			<a href="#">
 				Alle specials
-				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>
+				<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>
 			</a>
 		</section>
 		<section>
 			<h2>Nieuws</h2>
-				<article>
-					<h3>Pathe Sound Sessions: luisteren wordt beleven. Ontdek deze albums!</h3>
-					<a href="#">Tijden & Tickets</a>
-				</article>
-				<article>
-					<h3>Horror Night 25 september: Tickets voor Resident Evil zijn nu te koop!</h3>
-					<a href="#">Tijden & Tickets</a>
-				</article>
-				<article>
-					<h3>Tickets voor de Prosecco Premiere van Verity zijn nu te koop!</h3>
-					<a href="#">Tijden & Tickets</a>
-				</article>
+				<div>
+					<article>
+						<img src="images/article-HorrorNight.jpg" alt="">
+						<h3>Horror Night 25 september: Tickets voor Resident Evil zijn nu te koop!</h3>
+						<a href="#">Tijden & Tickets</a>
+					</article>
+					<article>
+						<img src="images/article-10Daagse.jpg" alt="">
+						<h3>Film beleef je samen tijdens de Bioscoop 10-Daagse</h3>
+						<a href="#">Bekijk het programma</a>
+					</article>
+					<article>
+						<img src="images/article-DuneTickets.jpg" alt="">
+						<h3>Tickets voor de exclusieve voorpremiere van Dune: Part Three zijn nu te koop!</h3>
+						<a href="#">Tijden & Tickets</a>
+					</article>
+				</div>
 		</section>
 		<section>
-			<h2>De film kont naar je toe met Pathe Thuis</h2>
-			<p>- text -</p>
-			<a href="#">Ontdek Pathe Thuis</a>
+			<h2>De film kont naar je toe met</h2>
+			<img src="images/logoPatheThuis.svg" alt="pathe thuis">
+			<p>Ontdek het VOD-aanbod van Pathe bioscopen, met bijna <strong>6.000 films</strong> bechikbaar om te huren of te kopen</p>
+			<a href="#">
+				Ontdek Pathe Thuis
+				<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-move-up-right preview-icon"><path d="M13 5H19V11"/><path d="M19 5L5 19"/></svg>
+			</a>
 		</section>
 	</main>
 	<footer>
 		<section>
-			<img src="readme-images/dummy-plaatje.jpg">
+			<img src="images/imgi_91_Pathelogo.svg" alt="Pathe logo">
 			<button>NL</button>
 			<button>EN</button>
-			<h2>Heb je een vraag?</h2>
-				<details>
-					<summary>Wanneer komt het nieuwe filmprogramma online?</summary>
-					<p>- text -</p>
-				</details>
-				<details>
-					<summary>Hoe koop ik tickets?</summary>
-					<p>- text -</p>
-				</details>
-				<details>
-					<summary>Hoe verzilver ik een voucher?</summary>
-					<p>- text -</p>
-				</details>
-			<a href="#">Naar de klantenservice</a>
 		</section>
-		<nav>
-
+		<section>
+			<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-square preview-icon"><path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"/></svg>
+			<h2>Heb je een vraag?</h2>
+			<p>Bezoek onze klantensenservicepagina voor de meestgestelde vragen.</p>
+			<details>
+				<summary>
+					<h3>Wanneer komt het nieuwe filmprogramma online?</h3>
+					<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>
+				</summary>
+				<p>De speelweken bij Pathé lopen van donderdag tot en met woensdag. Elke maandag maken wij het filmprogramma voor de nieuwe speelweek. Elke maandagavond na 18:00 uur wordt het nieuwe programma online gezet, dit gebeurt in de loop van de avond.</p>
+				<p>Enkele voorstellingen worden eerder al online gezet. Dit zijn hoofdzakelijk IMAX, 4DX, Dolby Cinema, Dolby Atmos en ScreenX voorstellingen. Na maandagavond is de programmatie compleet tot en met de woensdag een week later.</p>
+			</details>
+			<details>
+				<summary>
+					<h3>Hoe koop ik tickets?</h3>
+					<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>
+				</summary>
+				<p>Tickets koop je eenvoudig en snel via onze Pathé App of website. Het is ook mogelijk om tickets in de bioscoop te kopen. Let wel op, al onze bioscopen zijn pin only. Hier kan niet met contant geld betaald worden.</p>
+				<h4>Online tickets kopen</h4>
+				<ol>
+					<li>Selecteer de voorstelling van jouw keuze</li>
+					<li>Selecteer jouw plaats in de zaal en klik op volgende</li>
+					<li>Je komt nu bij een besteloverzicht</li>
+					<li>Een voucher kun je inwisselen door op 'Voer code in' te klikken</li>
+					<li>Kies een tickettype door op het plusje te klikken. Selecteer wanneer van toepassing een abonnement of 'kinderticket'</li>
+					<li>Klik onderaan de pagina op 'Volgende'</li>
+					<li>Log in met jouw Club Pathe account of ga verder zonder account</li>
+					<li>Betaal de transactie, dit is ook mogelijk met een Pathe Giftcard of Nationale Bioscoopbon</li>
+					<li>Je ontvangt de bevestiging van jouw bestelling in jouw account en per mail</li>
+				</ol>
+				<p>Veel plezier bij je voorstelling!</p>
+			</details>
+			<details>
+				<summary>
+					<h3>Hoe verzilver ik een voucher?</h3>
+					<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>
+				</summary>
+				<p>Vouchers kun je inwisselen via de website of Pathé App. Doorloop de volgende stappen tijdens het bestellen van tickets:</p>
+				<ol>
+					<li>Selecteer de voorstelling van jouw keuze.</li>
+					<li>Selecteer jouw plaats in de zaal.</li>
+					<li>Kies je filmticket. Selecteer 'Voucher' en vul je vouchercode in.</li>
+					<li>Klik onderaan de pagina op 'Volgende'</li>
+					<li>Log in met jouw Club Pathe account of ga verder zonder account</li>
+					<li>Betaal de transactie, dit is ook mogelijk met een Pathe Giftcard of Nationale Bioscoopbon.</li>
+					<li>Je ontvangt de bevestiging van jouw bestelling in jouw account en per e-mail.</li>
+				</ol>
+			</details>
+			<a href="#">
+				Naar de klantenservice
+				<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>
+			</a>
+		</section>
+		<nav aria-label="Footer links">
+			<details>
+				<summary>
+					Nu te zien
+					<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>
+				</summary>
+				<ul>
+					<li><a href="#">Alle films</a></li>
+					<li><a href="#">Resident Evil</a></li>
+					<li><a href="#">Spider-man: Brand New Day</a></li>
+					<li><a href="#">Pressure</a></li>
+					<li><a href="#">Fall 2: Deadpoint</a></li>
+				</ul>
+			</details>
+			<details>
+				<summary>
+					Waar vind je ons?
+					<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>
+				</summary>
+				<ul>
+					<li><a href="#">Bioscopen in Amsterdam</a></li>
+					<li><a href="#">Bioscopen in Rotterdam</a></li>
+					<li><a href="#">Bioscopen in Den Haag</a></li>
+					<li><a href="#">Bioscopen in Utrecht</a></li>
+					<li><a href="#">Bioscopen in Tilburg</a></li>
+					<li><a href="#">Alle bioscopen</a></li>
+				</ul>
+			</details>
+			<details>
+				<summary>
+					Over
+					<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>
+				</summary>
+				<ul>	
+					<li><a href="#">Club Pathe</a></li>
+					<li><a href="#">Abonnementen</a></li>
+					<li><a href="#">Specials & Events</a></li>
+					<li><a href="#">IMAX</a></li>
+					<li><a href="#">4DX</a></li>
+					<li><a href="#">Dolby Cinema</a></li>
+					<li><a href="#">Dolby Atmos</a></li>
+					<li><a href="#">ScreenX</a></li>
+					<li><a href="#">Pathe Filmfeestje</a></li>
+					<li><a href="#">Nieuws</a></li>
+				</ul>
+			</details>
+			<details>
+				<summary>
+					Handige Links
+					<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>
+				</summary>
+				<ul>
+					<li><a href="#">Klantenservice</a></li>
+					<li><a href="#">Pathe Giftcard</a></li>
+					<li><a href="#">Pathe Voucherchecker</a></li>
+					<li><a href="#">Mijn Club Pathe Account</a></li>
+					<li><a href="#">Beheer je e-mailvoorkeuren</a></li>
+					<li><a href="#">Werken bij Pathe</a></li>
+					<li><a href="#">Pathe Thuis</a></li>
+					<li><a href="#">Pathe Business</a></li>
+					<li><a href="#">TheAnyThing</a></li>
+					<li><a href="#">X-CUBE</a></li>
+					<li><a href="#">Pers</a></li>
+				</ul>
+			</details>
+			<details>
+				<summary>
+					Voorwaarden
+					<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>
+				</summary>
+				<ul>
+					<li><a href="#">Alle voorwaarden</a></li>
+					<li><a href="#">Privacy Statement</a></li>
+					<li><a href="#">Cookies</a></li>
+					<li><a href="#">CVD</a></li>
+					<li><a href="#">Toegankelijkheid</a></li>
+				</ul>
+			</details>
 		</nav>
 		<ul>
-			<li><a href="#"></a></li>
-			<li><a href="#"></a></li>
-			<li><a href="#"></a></li>
-			<li><a href="#"></a></li>
-			<li><a href="#"></a></li>
+			<li><a href="#" aria-label="Instagram">
+				<img src="images/logoInsta.svg" alt="">
+			</a></li>
+			<li><a href="#" aria-label="Facebook">
+				<img src="images/logoFB.svg" alt="">
+			</a></li>
+			<li><a href="#" aria-label="TikTok">
+				<img src="images/logoTT.svg" alt="">
+			</a></li>
+			<li><a href="#" aria-label="YouTube">
+				<img src="images/logoYT.svg" alt="">
+			</a></li>
+			<li><a href="#" aria-label="X">
+				<img src="images/logoX.svg" alt="">
+			</a></li>
 		</ul>
-		<p>- text -</p>
+		<p>Pathe bioscopen Naderland © 2026</p>
+		<p>Alle rechten voorbehouden ®</p>
 	</footer>
 
 	<script defer src="scripts/script.js"></script>
 </body>
-	<!-- fonts -->
 	<!-- hou read me bij -->
 	<!-- meer aria-labels -->
+	<!-- button en nl label -->
 </html>
+
+
+<!-- animatie: svg img invert color, picture element om de img, in css systeem voorkeuren, gebruik :has(), combineer met light / dark
+ keyframe, hover  -->
+
+ <!-- page2,  -->
