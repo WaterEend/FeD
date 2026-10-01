@@ -24,9 +24,13 @@
 	--color-button2: #222324;
 	--color-button3: rgba(90, 87, 87, 0.696);
 	--color-special: #e83e31;
+	--color-gradient1: #3a3c3e;
+	--color-border1:#1b1d1f;
+	--color-background2:#1b1d1f;
 
 	/* fonts */
 	--font-1: "Heebo", Arial, sans-serif;
+	--font-SMtitle: "Oswald", "Arial Narrow", sans-serif;
 }
 
 
@@ -87,11 +91,6 @@ header > nav > button[aria-expanded] svg {
 header > nav >  button[aria-expanded="true"] svg {
 	rotate: 180deg;
 }
-
-
-
-
-
 
 header {
 	display: grid;
@@ -190,9 +189,8 @@ footer section:nth-of-type(1) img {
 	height: 4em;
 }
 
-
 footer section:nth-of-type(1) button {
-	background-color: var(--color-nav);
+	background-color: var(--color-background2);
 	color: var(--color-text2);
 	border-radius: 8px;
 	padding: .8em 1.2em;
@@ -273,7 +271,7 @@ footer section:nth-of-type(2) > a {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	background-color: var(--color-nav);
+	background-color: var(--color-background2);
 	color: var(--color-text2);
 	font-weight: bold;
 	border-radius: 8px;
@@ -375,8 +373,8 @@ footer > p {
 	}
 
 	header > nav > a img, header > nav h1 img {
-		width: 2em;
-		height: 2em;
+		width: 4rem;
+		height: 4rem;
 	}
 
 	/* a in header */
@@ -397,6 +395,7 @@ footer > p {
 		color: var(--color-text2);
 		font-weight: bold;
 		text-decoration: none;
+		white-space: nowrap;
 	}
 
 	/* club pathe button */

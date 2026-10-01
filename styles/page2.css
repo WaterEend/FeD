@@ -2,8 +2,12 @@
 /* Page 2 */
 
 header{
+    position: relative;
+    z-index: 0;
     grid-template-rows: 4em 8em auto auto auto auto;
     grid-template-columns: auto 1fr 1fr auto;
+    /* ai help met het fixen van mijn gradient */
+    background: linear-gradient(var(--color-gradient1) 80%, var(--color-background));
 }
 
 /* ------==Header==------ */
@@ -24,17 +28,22 @@ header > a img {
 header > img:nth-of-type(1) {
 	grid-row: 1 / 6;
 	grid-column: 1 / -1;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
 	width: 100%;
 	height: 100%;
     object-fit: cover;
 }
 
 header div {
-	grid-row: 1 / 6;
-	grid-column: 1 / -1 ;
-	background: linear-gradient(transparent 50%, var(--color-background) 100%), radial-gradient( transparent 60%, rgba(0,0,0,0.6) 100%);
+    grid-row: 1 / 6;
+    grid-column: 1 / -1;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(transparent 50%, var(--color-gradient1) 100%), radial-gradient(transparent 60%, rgba(0,0,0,0.6) 100%);
 }
-
 
 /* play button */
 header section > button:nth-of-type(1) {
@@ -108,7 +117,7 @@ header section > ul {
     list-style: none;
     margin: 0 1rem;
     padding: 0;
-    color: var(--color-text3);
+    color: var(--color-text2);
     font-size: .8rem;
 }
 
@@ -124,7 +133,7 @@ header section > ul > li:not(:last-of-type)::after {
 }
 
 /* likes */
-header section > ul:nth-of-type(1) button {
+header section > ul button {
     display: flex;
     align-items: center;
     gap: .2rem;
@@ -135,14 +144,14 @@ header section > ul:nth-of-type(1) button {
     padding: 0;
 }
 
-header section > ul:nth-of-type(1) button svg {
+header section > ul button svg {
     height: 1em;
     width: 1em;
     fill: currentColor;
 }
 
 /* waarschuwingen */
-header section > ul:nth-of-type(1) img {
+header section > ul img {
     width: 1.3em;
     height: 1.3em;
     background-color: white;
@@ -158,12 +167,18 @@ header section > ul ul {
 }
 
 /* releasedatum en acteurs */
+
 header section > p {
     grid-column: 1 / -1;
     margin: .5rem 1rem 0;
     color: var(--color-text2);
     font-size: .8rem;
     line-height: 1.2rem;
+}
+
+/* voor groot scherm */
+header section > p:nth-of-type(3) {
+    display:none;
 }
 
 /* info, trailers, details */
@@ -184,11 +199,11 @@ header section details {
     grid-column: 1/ -1;
     margin: 0 1em;
     padding-bottom: 1em;
-    background-color: var(--color-nav);
+    background-color: var(--color-background2);
     border-radius: 8px;
 }
 
-/* moest ai vragen hoe ik did deed */
+/* moest ai vragen hoe ik dit deed */
 header section details::details-content {
     content-visibility: visible;
 }
@@ -273,25 +288,40 @@ main section:nth-of-type(1) h2 {
 }
 
 /* locatie */
-main section:nth-of-type(1) > button:nth-of-type(1) {
+main search {
     grid-row-start: 1;
     grid-column: 1 / -1;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
     margin-right: 1em;
-    padding: 1em 1em 1em 6em;
     border: 1px solid grey;
     border-radius: 8px;
     background-color: var(--color-button2);
+}
+
+main search > button:nth-of-type(1) {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em 1em 1em 6em;
     color: var(--color-text2);
     font-weight: bold;
+    background: none;
+    border: none;
+}
+
+main search > button:nth-of-type(2), main search > button:nth-of-type(3) {
+    display: none;
+}
+
+main search svg {
+    height: 1.5em;
+    width: 1.5em;
 }
 
 /* filter */
-main section:nth-of-type(1) > button:nth-of-type(2) {
+main section:nth-of-type(1) > button {
     grid-row-start: 2;
-    grid-column-start: 1;
     align-self: stretch;
     display: flex;
     align-items: center;
@@ -303,10 +333,19 @@ main section:nth-of-type(1) > button:nth-of-type(2) {
     color: var(--color-text2);
 }
 
+main section:nth-of-type(1) > button:not(:nth-of-type(1)) {
+    display: none;
+}
+
+main section:nth-of-type(1) > button:nth-of-type(1) {
+    grid-column-start: 1;
+    font-size: 0;
+}
+
 
 main section:nth-of-type(1) > button svg {
-    width: 1.5em;
-    height: 1.5em;
+    width: 1.5rem;
+    height: 1.5rem;
 }
 
 /* dagen */
@@ -356,6 +395,10 @@ main section:nth-of-type(1) label:has(input:focus-visible) {
 }
 
 /* locatie en film tijd */
+main article > ul > li:not(:nth-of-type(1)) {
+    display: none;
+}
+
 main section:nth-of-type(1) > article {
     grid-column: 1 / -1;
     margin: 0;
@@ -424,6 +467,10 @@ main article > ul {
     padding: 0;
 }
 
+main article > ul::-webkit-scrollbar {
+    display: none;
+}
+
 main article > ul > li {
     flex: 0 0 auto;
 }
@@ -434,7 +481,7 @@ main article > ul button {
     flex-wrap: wrap;
     align-items: baseline;
     column-gap: .3em;
-    width: 14em;
+    width: 12rem;
     padding: 0 0 .8em;
     border: none;
     border-radius: 8px;
@@ -485,6 +532,11 @@ main article > ul small {
     margin-left: .8rem;
 }
 
+main article > ul mark {
+    background-color: var(--color-button1);
+    color: var(--color-text);
+}
+
 main article > ul time:first-of-type {
     margin-left: .8rem;
     font-size: 2rem;
@@ -506,11 +558,6 @@ main section:nth-of-type(2) h2::before, main section:nth-of-type(2) h2::after {
     flex: 1;
     height: 1px;
     background-color: var(--color-text3);
-}
-
-main article > ul mark {
-    background-color: var(--color-button1);
-    color: var(--color-text);
 }
 
 main section:nth-of-type(2) strong:nth-of-type(2) {
@@ -539,7 +586,190 @@ main section:nth-of-type(2) strong:nth-of-type(2) {
 /* ------==Computer screen width==------ */
 
 @media (min-width: 68em) {
-	header > a {
+    
+    /* logo en boek nu button */
+    body > a, header > a {
 		display: none;
 	}
+
+    /* header */
+    header {
+        position: relative;
+        z-index: 0;
+        grid-template-rows: none;
+        grid-template-columns: 2em auto auto 1fr;
+        padding-top: 8em;
+    }
+
+    /* achtergrond img en gradient div */
+    header > img:nth-of-type(1), header div {
+        grid-row: auto;
+        grid-column: auto;
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+    }
+
+    header > img:nth-of-type(1) {
+        left: 20%;
+        width: 80%;
+    }
+
+    header div {
+        background: linear-gradient(transparent 85%, var(--color-background)), linear-gradient(to right, var(--color-gradient1) 30%, transparent 65%);
+    }
+
+    /* film title */
+    header section h1 {
+        grid-row-start: 1;
+        grid-column: 2 / 5;
+        max-width: 32rem;
+        margin: 0 0 1.5rem;
+        text-align: left;
+        font-family: var(--font-SMtitle);
+        font-size: 3.5rem;
+        line-height: 3.5rem;
+    }
+
+    /* play button */
+    header section > button:nth-of-type(1) {
+        grid-row: auto;
+        grid-column: auto;
+        position: absolute;
+        top: 55%;
+        left: 70%;
+        translate: -50% -50%;
+        width: 5em;
+        height: 5em;
+        margin: 0;
+    }
+
+    header section > button:nth-of-type(1) svg {
+        width: 2em;
+        height: 2em;
+    }
+
+    /* watchlist en beoordelen button */
+    header section > button:nth-of-type(2), header section > button:nth-of-type(3) {
+        grid-row-start: 2;
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    header section > button:nth-of-type(2) {
+        grid-column: 2;
+        margin: 0 .5rem 1.5rem 0;
+    }
+
+    header section > button:nth-of-type(3) {
+        grid-column: 3;
+        margin: 0 0 1.5rem;
+    }
+
+    /* lijst met info over film */
+    header section > ul {
+        grid-row-start: 3;
+        grid-column: 2 / 5;
+        margin: 0 0 1rem;
+        font-size: .9rem;
+    }
+
+    header section > p {
+        grid-column: 2 / 5;
+        max-width: 32rem;
+        margin: .5rem 0 0;
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    header section > p:nth-of-type(3) {
+        display: block;
+    }
+
+    /* info, trailer, details a  */
+    header section > a {
+        grid-column: 2 / 5;
+        justify-self: start;
+        margin: 1rem 0 2rem;
+    }
+
+    /* details info */
+    header section details {
+        grid-column: 2 / 5;
+        max-width: 32rem;
+        margin: 0 0 4rem;
+    }
+
+    /* locatie dropdown */
+    main search {
+        margin-right: 0;
+    }
+
+    main search > button:nth-of-type(1) svg {
+        display: none;
+    }
+
+    main search > button:nth-of-type(2), main search > button:nth-of-type(3) {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        margin: .5rem .5rem .5rem 0;
+        padding: 1rem;
+        border: none;
+        border-radius: 8px;
+        background-color: var(--color-button3);
+        color: var(--color-text2);
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    /* kies een datum */
+    main section:nth-of-type(1) {
+        grid-template-columns: auto auto minmax(0, 1fr) auto auto;
+        padding: 0 2em;
+    }
+
+    main section:nth-of-type(1) > button:not(:nth-of-type(1)) {
+        display: flex;
+    }
+
+    main section:nth-of-type(1) > button:nth-of-type(1), main section:nth-of-type(1) > button:nth-of-type(4) {
+        flex-direction: column;
+        gap: .3rem;
+        padding: 0 1.5rem;
+        font-size: 1rem;
+    }
+
+    main section:nth-of-type(1) > button:nth-of-type(2) {
+        grid-column-start: 2;
+    }
+
+    main section:nth-of-type(1) > ul {
+        grid-column-start: 3;
+    }
+
+    main section:nth-of-type(1) > button:nth-of-type(3) {
+        grid-column-start: 4;
+    }
+
+    main section:nth-of-type(1) > button:nth-of-type(4) {
+        grid-column-start: 5;
+    }
+    
+    main section:nth-of-type(1) label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 8rem;
+        height: 5.5rem;
+    }
+
+    /* tijden */
+    main article > ul > li:not(:nth-of-type(1)) {
+        display: block;
+        width: 12rem;
+        border: 1px solid var(--color-border1);
+        border-radius: 8px;
+    }
+
 }

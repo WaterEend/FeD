@@ -8,6 +8,10 @@
 	
 	<title>Film</title>
 	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Oswald:wght@700&display=swap" rel="stylesheet">
+
 	<link href="styles/style.css" rel="stylesheet">
 	<link href="styles/page2.css" rel="stylesheet">
 	<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
@@ -20,7 +24,7 @@
 			<img src="images/imgi_91_Pathelogo.svg" alt="Pathe home pagina">
 		</a>
 		<ul>
-			<li><a href="#" aria-current="page">films</a></li>
+			<li><a href="#" aria-current="true">Films</a></li>
 			<li><a href="#">Bioscopen</a></li>
 			<li><a href="#">
 				<img src="images/clubPathe.png" alt="">
@@ -44,7 +48,7 @@
 				<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>
 			</button>
 			<ul aria-label="Taal kiezen">
-				<li><a href="#" aria aria-current="true">Nederlands</a></li>
+				<li><a href="#" aria-current="true">Nederlands</a></li>
 				<li><a href="#">Engels</a></li>
 			</ul>
 		</nav>
@@ -92,6 +96,7 @@
 			</ul>	
 			<p>Releasedatum: 30 jul 2026</p>
 			<p>Met Tom Holland, Jon Bernthal, Jacob Batalon, Sadie Sink, Zendaya, Mark Ruffalo, Michael Mando, Tramell Tillman van Destin Daniel Cretton</p>
+			<p>Na het wereldwijde kassucces van Spider-Man: No Way Home begint er met Spider-Man: Brand New Day compleet nieuw hoofdstuk voor Peter.</p>
 			<a href="#">
 				Informatie, Trailers & details 
 				<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>
@@ -111,7 +116,7 @@
 	</a>
 	<nav aria-label="Navigatie menu">
 		<ul>
-			<li><a href="#" aria-current="page">
+			<li><a href="#" aria-current="true">
 				<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-film"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M7 3v18"/><path d="M3 7.5h4"/><path d="M3 12h18"/><path d="M3 16.5h4"/><path d="M17 3v18"/><path d="M17 7.5h4"/><path d="M17 16.5h4"/></svg>
 				Films
 			</a></li>
@@ -136,12 +141,26 @@
 	<main>
 		<section>
 			<h2>Waar?</h2>
-			<button aria-haspopup="listbox">
-				Pathe Amsterdam-Noord 
-				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>
-			</button>
-			<button aria-label="filters">
+			<search>
+				<button aria-haspopup="listbox">
+					Pathe Amsterdam-Noord
+					<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>
+				</button>
+				<button>
+					<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin preview-icon"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+					In mijn buurt
+				</button>
+				<button>
+					<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart preview-icon"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/></svg>
+					Favoriete bioscopen
+				</button>
+			</search>
+			<button>
 				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sliders-horizontal preview-icon"><path d="M10 5H3"/><path d="M12 19H3"/><path d="M14 3v4"/><path d="M16 17v4"/><path d="M21 12h-9"/><path d="M21 19h-5"/><path d="M21 5h-7"/><path d="M8 10v4"/><path d="M8 12H3"/></svg>
+				Filters
+			</button>
+			<button aria-label="Vorige dag">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left preview-icon"><path d="m15 18-6-6 6-6"/></svg>
 			</button>
 			<ul aria-label="dag voor ticket kiezen">
 				<li><label><input type="radio" name="dag" checked>Vandaag</label></li>
@@ -151,9 +170,18 @@
 				<li><label><input type="radio" name="dag">za. 26 sep</label></li>
 				<li><label><input type="radio" name="dag">zo. 27 sep</label></li>
 				<li><label><input type="radio" name="dag">ma. 28 sep</label></li>
+				<li><label><input type="radio" name="dag">di. 29 sep</label></li>
+				<li><label><input type="radio" name="dag">wo. 30 sep</label></li>
 			</ul>
+			<button aria-label="Volgende dag">
+				<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>
+			</button>
+			<button>
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-days preview-icon"><path d="M8 2v3"/><path d="M16 2v3"/><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M8 13h.01"/><path d="M12 13h.01"/><path d="M16 13h.01"/><path d="M8 17h.01"/><path d="M12 17h.01"/><path d="M16 17h.01"/></svg>
+				Kalender
+			</button>
 				<article>
-					<button>
+					<button aria-label="Pathe Amsterdam noord aan favorieten toevoegen">
 						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-plus preview-icon"><path d="m14.479 19.374-.971.939a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5a5.2 5.2 0 0 1-.219 1.49"/><path d="M15 15h6"/><path d="M18 12v6"/></svg>
 					</button>
 					<a href="#">
@@ -175,13 +203,18 @@
 								<time datetime="22:55">22:55</time>
 							</button>
 						</li>
+						<li aria-hidden="true"></li>
+						<li aria-hidden="true"></li>
+						<li aria-hidden="true"></li>
+						<li aria-hidden="true"></li>
+						<li aria-hidden="true"></li>
 					</ul>
 				</article>
 		</section>
 		<section>
 			<h2>Rond Pathe Amsterdam-Noord</h2>
 			<article>
-					<button>
+					<button aria-label="Pathe de Munt aan favorieten toevoegen">
 						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-plus preview-icon"><path d="m14.479 19.374-.971.939a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5a5.2 5.2 0 0 1-.219 1.49"/><path d="M15 15h6"/><path d="M18 12v6"/></svg>
 					</button>
 					<a href="#">
@@ -203,6 +236,11 @@
 								<time datetime="22:55">22:55</time>
 							</button>
 						</li>
+						<li aria-hidden="true"></li>
+						<li aria-hidden="true"></li>
+						<li aria-hidden="true"></li>
+						<li aria-hidden="true"></li>
+						<li aria-hidden="true"></li>
 					</ul>
 				</article>
 		</section>
@@ -210,8 +248,8 @@
 	<footer>
 		<section>
 			<img src="images/imgi_91_Pathelogo.svg" alt="Pathe logo">
-			<button>NL</button>
-			<button>EN</button>
+			<button aria-pressed="true">NL</button>
+			<button aria-pressed="false">EN</button>
 		</section>
 		<section>
 			<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-square preview-icon"><path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"/></svg>
